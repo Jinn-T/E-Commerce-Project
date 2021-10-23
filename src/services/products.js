@@ -6,13 +6,14 @@ const cleanRecords = (querySnapshot) => {
     return querySnapshot.docs.map(cleanRecord);
 };
 
-export const getProducts = async () => {
-    // Collection reference
-    const colRef = firestore.collection("products");
-    // Promise<QuerySnapshot> -> QuerySnapshot // returns up to date object, returning a promise so we need await
-    const snapshot = await colRef.get();
+// export const getProducts = async () => {
+//     // Collection reference
+//     const colRef = firestore.collection("products");
+//     console.log(colRef);
+//     // Promise<QuerySnapshot> -> QuerySnapshot // returns up to date object, returning a promise so we need await
 
-    return cleanRecords(snapshot);
-};
+//     const snapshot = await colRef.get();
+//     console.log(snapshot.docs);
 
-getProducts();
+//     return cleanRecords(snapshot);
+// };

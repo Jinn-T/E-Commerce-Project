@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid hotpink;
+    border-radius: 10px;
+    margin: 7px;
+}
+
+.price {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+}
+.textSpace {
+    margin-right: 10px;
+}
+
+.img {
+    height: 75px;
+    width: 150px;
+}
+.btn {
+    display: flex;
+    justify-content: space-evenly;
+}
+.btnSpace {
+    margin-right: 25px;
+}
+
+.grid {
+    display: flex;
+}
