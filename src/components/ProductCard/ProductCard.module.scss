@@ -4,13 +4,13 @@
 }
 
 .card {
-    height: 200px;
-    width: 200px;
+    height: 230px;
+    width: 180px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    border: 2px solid hotpink;
+    border: 2px solid black;
     border-radius: 10px;
     margin: 7px;
 }
@@ -25,8 +25,8 @@
 }
 
 .img {
-    height: 75px;
-    width: 150px;
+    height: 100px;
+    width: 100px;
 }
 .btn {
     display: flex;
@@ -34,8 +34,4 @@
 }
 .btnSpace {
     margin-right: 25px;
-}
-
-.grid {
-    display: flex;
 }

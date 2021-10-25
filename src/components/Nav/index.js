@@ -1,2 +1,2 @@
-import Nav from "./Nav";
-export default Nav;
+import NavBar from "./Nav";
+export default NavBar;

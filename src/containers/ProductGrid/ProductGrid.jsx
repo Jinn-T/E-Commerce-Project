@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import styles from "./ProductGrid.module.scss";
 
 const ProductGrid = () => {
-    //setting state for our products
+    //setting state for our product data
     const [products, setProducts] = useState(null);
 
     // grabbing our data from databse
@@ -28,7 +28,10 @@ const ProductGrid = () => {
     console.log(products);
     return (
         <div className={styles.grid}>
-            <ProductCard products={products} />
+            {products &&
+                products.map((product, index) => (
+                    <ProductCard product={product} key={index} />
+                ))}
         </div>
     );
 };

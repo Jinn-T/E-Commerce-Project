@@ -1,0 +1,12 @@
+.navBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style-type: none;
+    height: 30px;
+    border-bottom: solid 2px grey;
+}
+.link {
+    text-decoration: none;
+    list-style-type: none;
+}
