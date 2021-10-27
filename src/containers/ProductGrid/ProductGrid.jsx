@@ -23,7 +23,7 @@ const ProductGrid = () => {
         };
 
         getProducts();
-    }, []);
+    }, []); // empty array so it doesnt run for every change of state and only on mount
 
     console.log(products);
     return (

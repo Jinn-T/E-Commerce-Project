@@ -15,7 +15,7 @@ const ProductCard = ({ product }) => {
                 <Button variant="primary" size="sm">
                     Add to Cart
                 </Button>
-                <Nav.Link as={Link} to="/">
+                <Nav.Link as={Link} to={`/product/${product.id}`}>
                     <Button variant="primary" size="sm">
                         Info
                     </Button>

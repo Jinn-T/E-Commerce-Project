@@ -2,18 +2,33 @@
 
 import firestore from "./firestore";
 
+// clean a student record,
+const cleanRecord = (docSnapshot) => ({
+    id: docSnapshot.id,
+    ...docSnapshot.data(),
+});
+
 const cleanRecords = (querySnapshot) => {
     return querySnapshot.docs.map(cleanRecord);
 };
 
-// export const getProducts = async () => {
-//     // Collection reference
-//     const colRef = firestore.collection("products");
-//     console.log(colRef);
-//     // Promise<QuerySnapshot> -> QuerySnapshot // returns up to date object, returning a promise so we need await
+// get all products from firestore
 
-//     const snapshot = await colRef.get();
-//     console.log(snapshot.docs);
+export const getProducts = async () => {
+    // CollectionReference
+    const colRef = firestore.collection("products");
+    const snapshot = await colRef.get();
 
-//     return cleanRecords(snapshot);
-// };
+    return cleanRecords(snapshot);
+};
+
+export const findProduct = async (id) => {
+    // collection reference
+    const colRef = firestore.collection("products");
+    // document reference with specified id
+    const docRef = colRef.doc(id);
+    // document snapshot - returns a promise
+    const docSnap = await docRef.get();
+    // now clean record with data we want
+    return cleanRecord(docSnap);
+};

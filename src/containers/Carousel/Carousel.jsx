@@ -5,11 +5,7 @@ const CarouselC = () => {
     return (
         <Carousel style={{ height: "300px" }}>
             <Carousel.Item style={{ height: "300px" }}>
-                <img
-                    className="d-block w-100"
-                    src="https://via.placeholder.com/300.png/09f/fff"
-                    alt="First slide"
-                />
+                <img className="d-block w-100" alt="First slide" />
                 <Carousel.Caption>
                     <h3>First slide label</h3>
                     <p>
