@@ -1,21 +1,20 @@
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
+import image from "./irnbru.jpg";
 
 const CarouselC = () => {
     return (
-        <Carousel style={{ height: "300px" }}>
-            <Carousel.Item style={{ height: "300px" }}>
-                <img className="d-block w-100" alt="First slide" />
+        <Carousel>
+            <Carousel.Item>
+                <img className="d-block w-100" alt="First slide" src={image} />
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>
-                        Nulla vitae elit libero, a pharetra augue mollis
-                        interdum.
-                    </p>
+                    <h3></h3>
+                    <p></p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item style={{ height: "300px" }}>
+            <Carousel.Item>
                 <img
+                    style={{ height: "500px" }}
                     className="d-block w-100"
                     src="https://via.placeholder.com/300.png/09f/fff"
                     alt="Second slide"
@@ -28,9 +27,9 @@ const CarouselC = () => {
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item style={{ height: "300px" }}>
+            <Carousel.Item>
                 <img
-                    style={{ height: "300px" }}
+                    style={{ height: "500px" }}
                     className="d-block w-100"
                     src="https://via.placeholder.com/300.png/09f/fff"
                     alt="Third slide"

@@ -9,7 +9,9 @@ const Product = () => {
     // useParams returns an object of key/value pairs of URL parameters. Use it to access match.params of the current <Route>.
     const { id } = useParams();
     const [product, setProducts] = useState(null);
+    console.log(id);
 
+    // Again, gabbing our products data based on our id and setting our product state.
     useEffect(() => {
         const populateProduct = async () => {
             const data = await findProduct(id);
@@ -23,7 +25,7 @@ const Product = () => {
     if (!product) {
         return <h1>Oops, product not found!</h1>;
     }
-
+    // using our data to populate a specific product card.
     return (
         <div className={styles.card}>
             <Card style={{ width: "40rem" }}>
@@ -39,6 +41,7 @@ const Product = () => {
                     <Button variant="primary" size="sm">
                         Add to Cart
                     </Button>
+                    {/* when adding to card grab the quantity data from firestore and set an if statement to not go below quantity */}
                     <Nav.Link
                         as={Link}
                         to={`/product/${product.id}`}
