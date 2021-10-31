@@ -27,11 +27,16 @@ const ProductGrid = () => {
 
     console.log(products);
     return (
-        <div className={styles.grid}>
-            {products &&
-                products.map((product, index) => (
-                    <ProductCard product={product} key={index} />
-                ))}
+        <div>
+            <div className={styles.title}>
+                <h1>Snacks</h1>
+            </div>
+            <div className={styles.grid}>
+                {products &&
+                    products.map((product, index) => (
+                        <ProductCard product={product} key={index} />
+                    ))}
+            </div>
         </div>
     );
 };

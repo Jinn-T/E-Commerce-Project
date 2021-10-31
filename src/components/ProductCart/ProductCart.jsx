@@ -14,7 +14,7 @@ const ProductCart = ({ cart }) => {
             return;
         }
         setQty(qty + 1);
-        // .set or .update firestore
+        // .set or .update firestore?
     };
 
     const removeItem = () => {
@@ -22,7 +22,7 @@ const ProductCart = ({ cart }) => {
             return;
         }
         setQty(qty - 1);
-        // .set or .update firestore
+        // .set or .update firestore?
     };
     // remove button
 

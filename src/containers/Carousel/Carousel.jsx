@@ -1,12 +1,14 @@
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
-import image from "./irnbru.jpg";
+import irnbru from "./irnbru.jpg";
+import oasis from "./oasis.jpeg";
+import snack from "./snack.jpeg";
 
 const CarouselC = () => {
     return (
         <Carousel>
             <Carousel.Item>
-                <img className="d-block w-100" alt="First slide" src={image} />
+                <img className="d-block w-100" alt="First slide" src={irnbru} />
                 <Carousel.Caption>
                     <h3></h3>
                     <p></p>
@@ -14,33 +16,33 @@ const CarouselC = () => {
             </Carousel.Item>
             <Carousel.Item>
                 <img
-                    style={{ height: "500px" }}
+                    style={{ height: "550px" }}
                     className="d-block w-100"
-                    src="https://via.placeholder.com/300.png/09f/fff"
+                    src={oasis}
                     alt="Second slide"
                 />
 
                 <Carousel.Caption>
-                    <h3>Second slide label</h3>
+                    {/* <h3>Second slide label</h3>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
+                    </p> */}
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
                 <img
-                    style={{ height: "500px" }}
+                    style={{ height: "550px" }}
                     className="d-block w-100"
-                    src="https://via.placeholder.com/300.png/09f/fff"
+                    src={snack}
                     alt="Third slide"
                 />
 
                 <Carousel.Caption>
-                    <h3>Third slide label</h3>
+                    {/* <h3>Third slide label</h3>
                     <p>
                         Praesent commodo cursus magna, vel scelerisque nisl
                         consectetur.
-                    </p>
+                    </p> */}
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
