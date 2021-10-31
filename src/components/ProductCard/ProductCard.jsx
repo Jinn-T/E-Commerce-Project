@@ -15,6 +15,7 @@ const ProductCard = ({ product }) => {
         if (cart.includes(product)) {
             return;
         }
+        //shallow clone cart and add new product
         setCart([...cart, product]);
     };
     console.log("after click", cart);
@@ -27,7 +28,7 @@ const ProductCard = ({ product }) => {
                 <Card.Text>
                     Price: ${product.price}
                     <br></br>
-                    Quantity: {product.quantity}
+                    Stock Quantity: {product.quantity}
                 </Card.Text>
                 <div className={styles.btnWrapper}>
                     <Nav.Link>

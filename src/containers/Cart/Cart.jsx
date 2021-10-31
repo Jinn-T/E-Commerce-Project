@@ -1,14 +1,25 @@
 import Header from "../Header";
+import styles from "./Cart.module.scss";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router-dom";
+import ProductCart from "../../components/ProductCart";
 
 const Cart = () => {
-    // use context and setting an empty object {}
-    // handleAddToCart function and we need to pass this down to the product card as a prop and add it to our button onClick. onClick so we setcart with id ,
-    // grab api data and call the data with matching ids.
-    // add logic so we cant add multiple items with the same ids.
+    const { cart } = useContext(CartContext);
+    console.log(cart);
 
     return (
         <div>
-            <Header />
+            <div>
+                <h1>Cart</h1>
+            </div>
+            <div className={styles.productContainer}>
+                {cart &&
+                    cart.map((product, index) => (
+                        <ProductCart cart={product} key={index}></ProductCart>
+                    ))}
+            </div>
         </div>
     );
 };

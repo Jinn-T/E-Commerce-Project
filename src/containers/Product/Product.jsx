@@ -8,8 +8,8 @@ import styles from "./Product.module.scss";
 const Product = () => {
     // useParams returns an object of key/value pairs of URL parameters. Use it to access match.params of the current <Route>.
     const { id } = useParams();
+    //grabbing the id
     const [product, setProducts] = useState(null);
-    console.log(id);
 
     // Again, gabbing our products data based on our id and setting our product state.
     useEffect(() => {
