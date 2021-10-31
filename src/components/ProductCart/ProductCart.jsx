@@ -5,11 +5,14 @@ import { useState } from "react";
 
 const ProductCart = ({ cart }) => {
     // add a counter to add or minus quantity
-    const [qty, setQty] = useState(cart.quantity);
+    const [qty, setQty] = useState(1);
 
     // handler function to add qty
 
     const addItem = () => {
+        if (qty >= cart.quantity) {
+            return;
+        }
         setQty(qty + 1);
         // .set or .update firestore
     };
@@ -30,11 +33,9 @@ const ProductCart = ({ cart }) => {
                     <Card.Img variant="top" src={cart.img} />
                 </Nav.Link>
 
-                <Card.Body>
-                    <Card.Title className={styles.title}>
-                        {cart.name}
-                    </Card.Title>
-                    <Card.Text></Card.Text>
+                <Card.Body className={styles.bodyText}>
+                    <Card.Title>{cart.name}</Card.Title>
+                    <Card.Text>Price: ${cart.price}</Card.Text>
                 </Card.Body>
                 <Card.Footer>
                     <div className={styles.quantity}>
